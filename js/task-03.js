@@ -18,10 +18,9 @@ ul.style.display = "flex";
 
 
 function addImages(arr) {
-  arr.forEach(item => {
-    ul.insertAdjacentHTML("afterbegin", `<li><img style="width: 100%" src=${item.url} alt=${item.alt}></li>`);
-  });
-
+  const listItem = arr.map(item => `<li><img style="width: 100%" src=${item.url} alt='${item.alt}'></li>`)
+  .join("");
+  ul.innerHTML = listItem;
 }
 
 addImages(images);

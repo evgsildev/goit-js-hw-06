@@ -12,11 +12,8 @@ const ingredients = [
 function createList (arr) {
   const ul = document.getElementById("ingredients");
   
-  arr.forEach(item => {
-    const li = document.createElement("li");
-    li.classList.add("item");
-    li.innerHTML = item;
-    ul.append(li);
-  });
+  const listItem = arr.map(item => `<li class="list-item">${item}</li>`)
+  .join("");
+  ul.innerHTML = listItem;
 }
 createList(ingredients);
