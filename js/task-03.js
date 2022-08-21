@@ -17,10 +17,9 @@ const ul = document.querySelector(".gallery");
 ul.style.display = "flex";
 
 
-function addImages(arr) {
-  const listItem = arr.map(item => `<li><img style="width: 100%" src=${item.url} alt='${item.alt}'></li>`)
-  .join("");
-  ul.innerHTML = listItem;
+function createGallery(arr) {
+  const listItems = arr.map(item => `<li><img style="width: 100%" src=${item.url} alt='${item.alt}'></li>`).join("");
+  ul.insertAdjacentHTML("beforeend", listItems);
 }
 
-addImages(images);
+createGallery(images);
