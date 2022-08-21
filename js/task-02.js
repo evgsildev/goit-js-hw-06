@@ -14,7 +14,7 @@ function createItem (item) {
   listItem.classList.add("item");
   listItem.textContent = item;
 
-  console.log(item);
+
   return listItem;
 }
 
